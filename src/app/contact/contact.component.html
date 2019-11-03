@@ -1,0 +1,15 @@
+
+<div>
+	<h2>Contact Us</h2>
+	<form [formGroup]="contactForm" (ngSubmit)="handleFormSubmit()">
+		<input type="name" formControlName="name" placeholder="name"><br/>
+		<div *ngIf="contactForm.controls.name.errors">
+			<div *ngIf="contactForm.controls.name.errors.required">Name is Required.</div>
+		</div>
+		<input type="email" formControlName="email" placeholder="email"><br/>
+		<div *ngIf="contactForm.controls.email.errors">
+			<div *ngIf="contactForm.controls.email.errors.required">Email is Required.</div>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+</div>

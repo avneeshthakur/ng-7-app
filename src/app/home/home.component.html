@@ -1,0 +1,12 @@
+<p>
+  home works!
+</p>
+
+<button (click)="clickEvent()" >Click to get Users</button>
+
+<div *ngIf="users.length > 0">
+	<h2>Users</h2>
+	<div *ngFor="let user of users">
+		<p>{{user.name}}</p>
+	</div>
+</div>
